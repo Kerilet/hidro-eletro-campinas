@@ -1,11 +1,11 @@
 const express = require('express');
-const fs = require('fs');
+const path = require('path');
 const app = express();
 const port = 80;
 
 app.get('/', (req, res) => {
-    res.setHeader("content-type", "some/type");
-    fs.createReadStream("./index.html").pipe(res);
+    res.setHeader("content-type", "text/html");
+    res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 app.listen(port, () => {

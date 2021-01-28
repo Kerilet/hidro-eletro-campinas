@@ -1,23 +1,23 @@
 {
-  "name": "hidro-eletro-campinas",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kerilet/hidro-eletro-campinas.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Kerilet/hidro-eletro-campinas/issues"
-  },
-  "homepage": "https://github.com/Kerilet/hidro-eletro-campinas#readme"
+    "name": "hidro-eletro-campinas",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "node ./index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Kerilet/hidro-eletro-campinas.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Kerilet/hidro-eletro-campinas/issues"
+    },
+    "homepage": "https://github.com/Kerilet/hidro-eletro-campinas#readme"
 }
