@@ -6,6 +6,8 @@ let codes3 = [];
 
 let codes4 = [];
 
+let codes5 = [];
+
 const konamiKode = [
     'ArrowUp',
     'ArrowUp',
@@ -47,6 +49,17 @@ const barrelRoll = [
     'l',
 ].join('-');
 
+const reroRero = [
+    'r',
+    'e',
+    'r',
+    'o',
+    'r',
+    'e',
+    'r',
+    'o',
+].join('-');
+
 const konoDio = [
     'k',
     'o',
@@ -74,6 +87,12 @@ const konoDioDa = () => {
     playAudio3();
 };
 
+const writeReroRero = () => {
+    document.body.innerHTML += '<img src="./img/rerorero.gif" alt="rero rero rero" loading="Hey Jotaro, can I have that cherry?">';
+    playAudio5();
+};
+
+
 const playAudio = () => {
     const audio = document.getElementById('audio1');
     audio.play();
@@ -91,6 +110,11 @@ const playAudio3 = () => {
 
 const playAudio4 = () => {
     const audio = document.getElementById('audio4');
+    audio.play();
+};
+
+const playAudio5 = () => {
+    const audio = document.getElementById('audio5');
     audio.play();
 };
 
@@ -136,6 +160,22 @@ const barrelCheck = (callback) => {
             codes2 = [];
         }
         console.log(event, codes2);
+    });
+};
+
+
+const reroCheck = (callback) => {
+    document.addEventListener('keyup', (event) => {
+        codes5.push(event.key);
+        const joined = codes5.join('-');
+        if (reroRero.startsWith(joined)) {
+            if (reroRero === joined) {
+                callback();
+            }
+        } else {
+            codes5 = [];
+        }
+        console.log(event, codes5);
     });
 };
 
@@ -188,3 +228,4 @@ konamiCheck(writeKonamiCode);
 barrelCheck(writeBarrelRoll);
 dioCheck(konoDioDa);
 goodCheck(writeGoodBom);
+reroCheck(writeReroRero);
